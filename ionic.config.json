@@ -1,0 +1,8 @@
+{
+  "name": "teacher-ada",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "7527a0a6"
+}
