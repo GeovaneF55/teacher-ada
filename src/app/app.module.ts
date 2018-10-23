@@ -13,6 +13,9 @@ import { ItemPage } from '../pages/item/item';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { ItensService } from '../providers/itens-service/itens-service';
+import { EncomendasService } from '../providers/encomendas-service/encomendas-service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,7 +43,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ItensService,
+    EncomendasService
   ]
 })
 export class AppModule {}
