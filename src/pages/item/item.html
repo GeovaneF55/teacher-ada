@@ -9,4 +9,159 @@
 
 <ion-content padding>
 
+  <div padding>
+    <ion-segment [(ngModel)]="tipo">
+      <ion-segment-button value="unique">
+        Único
+      </ion-segment-button>
+      <ion-segment-button value="multiple">
+        Múltiplo
+      </ion-segment-button>
+      <ion-segment-button value="asserc_raz">
+        Asserção-Razão
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="tipo">
+    <ion-list radio-group *ngSwitchCase="'unique'">
+      <ion-item-divider>PERGUNTA</ion-item-divider>
+      <ion-item-group>
+          <ion-item><ion-label color="primary">ENUNCIADO</ion-label></ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(0)" placeholder="Enunciado"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-divider>RESPOSTAS</ion-item-divider>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ALTERNATIVA 1</ion-label>
+            <ion-radio value="alt1"></ion-radio>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(1)" placeholder="Alternativa 1"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ALTERNATIVA 2</ion-label>
+            <ion-radio value="alt2"></ion-radio>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(2)" placeholder="Alternativa 2"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ALTERNATIVA 3</ion-label>
+            <ion-radio value="alt3"></ion-radio>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(3)" placeholder="Alternativa 3"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ALTERNATIVA 4</ion-label>
+            <ion-radio value="alt4"></ion-radio>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(4)" placeholder="Alternativa 4"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ALTERNATIVA 5</ion-label>
+            <ion-radio value="alt5"></ion-radio>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(5)" placeholder="Alternativa 5"></textarea></ion-item>
+      </ion-item-group>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'multiple'">
+        <ion-item-divider>PERGUNTA</ion-item-divider>
+        <ion-item-group>
+            <ion-item><ion-label color="primary">ENUNCIADO</ion-label></ion-item>
+            <ion-item><textarea #area class="area" rows="1" (keyup)="resize(0)" placeholder="Enunciado"></textarea></ion-item>
+        </ion-item-group>
+        <ion-item-divider>RESPOSTAS</ion-item-divider>
+        <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">QTDE. DE AFIRMATIVAS</ion-label>
+            <ion-select>
+                <ion-option value="3" [selected]="true">3</ion-option>
+                <ion-option value="4">4</ion-option>
+                <ion-option value="5">5</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item>
+              <ion-label color="primary">AFIRMATIVA I</ion-label>
+              <ion-checkbox value="afir1"></ion-checkbox>
+            </ion-item>
+            <ion-item><textarea #area class="area" rows="1" (keyup)="resize(1)" placeholder="Afirmativa I"></textarea></ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item>
+              <ion-label color="primary">AFIRMATIVA II</ion-label>
+              <ion-checkbox value="afir2"></ion-checkbox>
+            </ion-item>
+            <ion-item><textarea #area class="area" rows="1" (keyup)="resize(2)" placeholder="Afirmativa II"></textarea></ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item>
+              <ion-label color="primary">AFIRMATIVA III</ion-label>
+              <ion-checkbox value="afir3"></ion-checkbox>
+            </ion-item>
+            <ion-item><textarea #area class="area" rows="1" (keyup)="resize(3)" placeholder="Afirmativa III"></textarea></ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item>
+              <ion-label color="primary">AFIRMATIVA IV</ion-label>
+              <ion-checkbox value="afir4"></ion-checkbox>
+            </ion-item>
+            <ion-item><textarea #area class="area" rows="1" (keyup)="resize(4)" placeholder="Afirmativa IV"></textarea></ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item>
+              <ion-label color="primary">AFIRMATIVA V</ion-label>
+              <ion-checkbox value="afir5"></ion-checkbox>
+            </ion-item>
+            <ion-item><textarea #area class="area" rows="1" (keyup)="resize(5)" placeholder="Afirmativa V"></textarea></ion-item>
+        </ion-item-group>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'asserc_raz'">
+      <ion-item-divider>PERGUNTA</ion-item-divider>
+      <ion-item-group>
+          <ion-item><ion-label color="primary">ENUNCIADO</ion-label></ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(0)" placeholder="Enunciado"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-divider>RESPOSTAS</ion-item-divider>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">A2 É RAZÃO DE A1?</ion-label>
+            <ion-checkbox value="acr_resp"></ion-checkbox>
+          </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ASSERÇÃO 1</ion-label>
+            <ion-checkbox value="acr1"></ion-checkbox>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(1)" placeholder="Alternativa 1"></textarea></ion-item>
+      </ion-item-group>
+      <ion-item-divider>PORQUE</ion-item-divider>
+      <ion-item-group>
+          <ion-item>
+            <ion-label color="primary">ASSERÇÃO 2</ion-label>
+            <ion-checkbox value="acr2"></ion-checkbox>
+          </ion-item>
+          <ion-item><textarea #area class="area" rows="1" (keyup)="resize(2)" placeholder="Alternativa 2"></textarea></ion-item>
+      </ion-item-group>
+    </ion-list>
+  </div>
+
+  <ion-fab bottom center>
+      <button ion-fab mini color="danger" (click)="gerarPDF()">
+        <ion-icon name="document"></ion-icon>
+      </button>
+    </ion-fab>
+
+  <ion-fab bottom right>
+    <button ion-fab color="primary" (click)="alterar()">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
