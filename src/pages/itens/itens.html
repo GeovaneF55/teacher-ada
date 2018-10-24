@@ -8,16 +8,19 @@
 </ion-header>
 
 
-<ion-content class="no-scroll" padding>
+<ion-content padding>
+
+  <ion-searchbar></ion-searchbar>
   
   <ion-list>
-  <ion-item-sliding *ngFor="let i of itens">
+    <ion-item-sliding *ngFor="let i of itens">
       <ion-item (click)="selecionaItem(i.id)">
         <h2>Questão {{i.id}}</h2>
+        <h3>{{i.curso}}</h3>
         <h3>{{i.materia}}</h3>
-        <ion-badge item-right [class.unico]='i.tipo_item=="TipoItem.unico"'
-          [class.multiplo]='i.tipo_item=="TipoItem.multiplo"'
-          [class.asserc_razao]='i.tipo_item=="TipoItem.asserc_razao"'>
+        <ion-badge item-right [class.unico]='i.tipo_item=="Único"'
+          [class.multiplo]='i.tipo_item=="Múltiplo"'
+          [class.asserc_razao]='i.tipo_item=="AR"'>
           {{i.tipo_item}}
         </ion-badge>
       </ion-item>

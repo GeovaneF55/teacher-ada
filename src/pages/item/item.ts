@@ -34,14 +34,9 @@ export class ItemPage {
     }
   }
 
-  /*@ViewChild('enunciado', { read: ElementRef }) enunciado: ElementRef;
-  resize() {
-    this.enunciado.nativeElement.style.height = this.enunciado.nativeElement.scrollHeight + 'px';
-  }*/
-
   @ViewChildren('area', { read: ElementRef }) area: QueryList<ElementRef>;
   resize(id) {
-    this.area._results[id].nativeElement.style.height = this.area._results[id].nativeElement.scrollHeight + 'px';
+    // (concertar) this.area._results[id].nativeElement.style.height = this.area._results[id].nativeElement.scrollHeight + 'px';
   }
 
   gerarPDF() {

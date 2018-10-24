@@ -6,7 +6,9 @@ import 'rxjs/add/operator/map';
 export class ItensService {
 
   itens: Array<Item> = [
-    { id: '1', tipo_item: "TipoItem.unico", materia: "AEDs I",
+    { id: '1', tipo_item: "Único",
+      curso: "Ciência da Computação",
+      materia: "AEDs I",
       enunciado: "Pergunta T1",
       alternativas: [
         [1, "Reposta R1 de T1"],
@@ -16,7 +18,9 @@ export class ItensService {
         [5, "Reposta R5 de T1"]
       ], correta: 1
     },
-    { id: '2', tipo_item: "TipoItem.asserc_razao", materia: "Redes I",
+    { id: '2', tipo_item: "AR",
+      curso: "Ciência da Computação",
+      materia: "Redes I",
       enunciado: "Pergunta T2",
       alternativas: [
         [1, "Reposta R1 de T2"],
@@ -26,7 +30,9 @@ export class ItensService {
         [5, "Reposta R5 de T2"]
       ], correta: 2
     },
-    { id: '3', tipo_item: "TipoItem.multiplo", materia: "Processamento de Imagens",
+    { id: '3', tipo_item: "Múltiplo",
+      curso: "Ciência da Computação",
+      materia: "Processamento de Imagens",
       enunciado: "Pergunta T3",
       alternativas: [
         [1, "Reposta R1 de T3"],
@@ -36,7 +42,9 @@ export class ItensService {
         [5, "Reposta R5 de T3"]
       ], correta: 5
     },
-    { id: '4', tipo_item: "TipoItem.multiplo", materia: "Banco de Dados",
+    { id: '4', tipo_item: "Múltiplo",
+      curso: "Ciência da Computação",
+      materia: "Banco de Dados",
       enunciado: "Pergunta T4",
       alternativas: [
         [1, "Reposta R1 de T4"],
@@ -46,7 +54,9 @@ export class ItensService {
         [5, "Reposta R5 de T4"]
       ], correta: 4
     },
-    { id: '5', tipo_item: "TipoItem.unico", materia: "Linguagem de Programação",
+    { id: '5', tipo_item: "Único",
+      curso: "Ciência da Computação",
+      materia: "Linguagem de Programação",
       enunciado: "Pergunta T5",
       alternativas: [
         [1, "Reposta R1 de T5"],
@@ -56,7 +66,9 @@ export class ItensService {
         [5, "Reposta R5 de T5"]
       ], correta: 3
     },
-    { id: '6', tipo_item: "TipoItem.asserc_razao", materia: "Cálculo I",
+    { id: '6', tipo_item: "AR",
+      curso: "Ciência da Computação",
+      materia: "Cálculo I",
       enunciado: "Pergunta T6",
       alternativas: [
         [1, "Reposta R1 de T6"],

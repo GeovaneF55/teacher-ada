@@ -10,21 +10,21 @@
 <ion-content padding>
 
   <div padding>
-    <ion-segment [(ngModel)]="tipo">
-      <ion-segment-button value="unique">
+    <ion-segment [(ngModel)]="tipoItem">
+      <ion-segment-button value="Único">
         Único
       </ion-segment-button>
-      <ion-segment-button value="multiple">
+      <ion-segment-button value="Múltiplo">
         Múltiplo
       </ion-segment-button>
-      <ion-segment-button value="asserc_raz">
+      <ion-segment-button value="AR">
         Asserção-Razão
       </ion-segment-button>
     </ion-segment>
   </div>
 
-  <div [ngSwitch]="tipo">
-    <ion-list radio-group *ngSwitchCase="'unique'">
+  <div [ngSwitch]="tipoItem">
+    <ion-list radio-group *ngSwitchCase="'Único'">
       <ion-item-divider>PERGUNTA</ion-item-divider>
       <ion-item-group>
           <ion-item><ion-label color="primary">ENUNCIADO</ion-label></ion-item>
@@ -68,7 +68,7 @@
       </ion-item-group>
     </ion-list>
   
-    <ion-list *ngSwitchCase="'multiple'">
+    <ion-list *ngSwitchCase="'Múltiplo'">
         <ion-item-divider>PERGUNTA</ion-item-divider>
         <ion-item-group>
             <ion-item><ion-label color="primary">ENUNCIADO</ion-label></ion-item>
@@ -122,7 +122,7 @@
         </ion-item-group>
     </ion-list>
 
-    <ion-list *ngSwitchCase="'asserc_raz'">
+    <ion-list *ngSwitchCase="'AR'">
       <ion-item-divider>PERGUNTA</ion-item-divider>
       <ion-item-group>
           <ion-item><ion-label color="primary">ENUNCIADO</ion-label></ion-item>
