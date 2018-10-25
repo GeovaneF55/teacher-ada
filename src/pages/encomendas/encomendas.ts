@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { EncomendasService } from '../../providers/encomendas-service/encomendas-service'; 
 import { ItensService } from '../../providers/itens-service/itens-service';
+import { Encomenda } from '../../interfaces/encomenda';
+import { Item } from '../../interfaces/item';
 
 @Component({
   selector: 'page-encomendas',

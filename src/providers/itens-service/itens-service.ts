@@ -1,12 +1,14 @@
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
+import { TipoItem } from '../../interfaces/tipo_item';
+import { Item } from '../../interfaces/item';
 
 @Injectable()
 export class ItensService {
 
   itens: Array<Item> = [
-    { id: '1', tipo_item: "Único",
+    { id: '1', tipo_item: TipoItem.unico,
       curso: "Ciência da Computação",
       materia: "AEDs I",
       enunciado: "Pergunta T1",
@@ -18,7 +20,7 @@ export class ItensService {
         [5, "Reposta R5 de T1"]
       ], correta: 1
     },
-    { id: '2', tipo_item: "AR",
+    { id: '2', tipo_item: TipoItem.asserc_razao,
       curso: "Ciência da Computação",
       materia: "Redes I",
       enunciado: "Pergunta T2",
@@ -30,7 +32,7 @@ export class ItensService {
         [5, "Reposta R5 de T2"]
       ], correta: 2
     },
-    { id: '3', tipo_item: "Múltiplo",
+    { id: '3', tipo_item: TipoItem.multiplo,
       curso: "Ciência da Computação",
       materia: "Processamento de Imagens",
       enunciado: "Pergunta T3",
@@ -42,7 +44,7 @@ export class ItensService {
         [5, "Reposta R5 de T3"]
       ], correta: 5
     },
-    { id: '4', tipo_item: "Múltiplo",
+    { id: '4', tipo_item: TipoItem.multiplo,
       curso: "Ciência da Computação",
       materia: "Banco de Dados",
       enunciado: "Pergunta T4",
@@ -54,7 +56,7 @@ export class ItensService {
         [5, "Reposta R5 de T4"]
       ], correta: 4
     },
-    { id: '5', tipo_item: "Único",
+    { id: '5', tipo_item: TipoItem.multiplo,
       curso: "Ciência da Computação",
       materia: "Linguagem de Programação",
       enunciado: "Pergunta T5",
@@ -66,7 +68,7 @@ export class ItensService {
         [5, "Reposta R5 de T5"]
       ], correta: 3
     },
-    { id: '6', tipo_item: "AR",
+    { id: '6', tipo_item: TipoItem.asserc_razao,
       curso: "Ciência da Computação",
       materia: "Cálculo I",
       enunciado: "Pergunta T6",

@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { ItemPage } from '../item/item';
 
 import { ItensService } from '../../providers/itens-service/itens-service'; 
+import { Item } from '../../interfaces/item';
 
 @Component({
   selector: 'page-itens',

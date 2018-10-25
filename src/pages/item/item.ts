@@ -36,7 +36,7 @@ export class ItemPage {
 
   @ViewChildren('area', { read: ElementRef }) area: QueryList<ElementRef>;
   resize(id) {
-    // (concertar) this.area._results[id].nativeElement.style.height = this.area._results[id].nativeElement.scrollHeight + 'px';
+    this.area.toArray()[id].nativeElement.style.height = this.area.toArray()[id].nativeElement.scrollHeight + 'px';
   }
 
   gerarPDF() {
